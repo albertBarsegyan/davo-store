@@ -1,0 +1,134 @@
+.footerContainer {
+  /*width: 100%;*/
+  background-color: #fff;
+  padding: 80px 40px 40px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 10px;
+  color: #000;
+  border-top: 1px solid #f0f0f0;
+  box-sizing: border-box;
+}
+
+.footerTop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 1024px) {
+  .footerTop {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.footerSection {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footerLabel {
+  font-size: 8px;
+  color: #000;
+}
+
+.footerInputBox {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #000;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+}
+
+.footerMain {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 1024px) {
+  .footerMain {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footerMain {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .footerContainer {
+    padding: 40px 20px 20px;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+}
+
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.columnTitle {
+  font-weight: 500;
+  margin-bottom: 5px;
+  border-bottom: 1px solid transparent; /* To match visual alignment */
+}
+
+.columnLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footerLink {
+  text-decoration: none;
+  color: #000;
+  font-size: 8px;
+  cursor: pointer;
+}
+
+.footerLink:hover {
+  opacity: 0.7;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 8px;
+  color: #666;
+}
+
+.socialLink {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.arrowIcon {
+  width: 10px;
+  height: 10px;
+}

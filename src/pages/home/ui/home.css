@@ -1,0 +1,54 @@
+.homeContainer {
+  width: 100%;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+@media (max-width: 1024px) {
+  .productGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 640px) {
+  .productGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 15px;
+  }
+}
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.productImage {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background-color: white;
+  object-fit: cover;
+}
+
+.productInfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.productName {
+  font-weight: 400;
+}
+
+.productPrice {
+  color: #666;
+}

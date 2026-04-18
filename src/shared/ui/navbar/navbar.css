@@ -1,0 +1,274 @@
+.navbarContainer {
+  width: 100%;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 10px;
+  color: #000;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-bottom: 1px solid transparent;
+}
+
+.navbarContainer.scrolled {
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #f0f0f0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbarContainer.scrolled .mainHeader {
+  height: 80px;
+}
+
+.mainHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+  transition: 0.4s ease;
+  height: 120px;
+  position: relative;
+  z-index: 1001; /* Above the overlay */
+}
+
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1002;
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.hamburger {
+  width: 20px;
+  height: 14px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:first-child {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.hamburger.open span:last-child {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+.desktopOnly {
+  display: flex;
+}
+
+.mobileOnly {
+  display: none;
+}
+
+.mobileMenuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding: 140px 40px 40px;
+  transform: translateY(-100%);
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  overflow-y: auto;
+}
+
+.mobileMenuOverlay.active {
+  transform: translateY(0);
+}
+
+.mobileNavLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mobileNavGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobileNavLink {
+  font-size: 24px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+.mobileUtilityGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 40px;
+  border-top: 1px solid #eee;
+}
+
+.mobileUtilityLink {
+  font-size: 14px;
+  text-decoration: none;
+  color: #666;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 1024px) {
+  .desktopOnly {
+    display: none;
+  }
+
+  .mobileOnly {
+    display: flex;
+  }
+
+  .mainHeader {
+    padding: 0 20px;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbarContainer.scrolled .mainHeader {
+    height: 60px;
+  }
+
+  .menuButton {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+  }
+
+  .logoSection {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .navSection.right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .logoSection .lazyImageWrapper {
+    width: 80px !important;
+  }
+
+  .navbarContainer.scrolled .logoSection .lazyImageWrapper {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: 640px) {
+  .mobileMenuOverlay {
+    padding: 100px 20px 40px;
+  }
+
+  .mobileNavLink {
+    font-size: 20px;
+  }
+}
+
+.navSection {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+
+.navSection.right {
+  justify-content: flex-end;
+}
+
+.logoTitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  letter-spacing: 0.2em;
+}
+
+.logoSubtitle {
+  font-size: 8px;
+  margin-bottom: 8px;
+}
+
+.flagContainer {
+  display: flex;
+  height: 6px;
+  margin-top: 5px;
+}
+
+.flagBar {
+  width: 4px;
+  height: 100%;
+}
+
+.flagRed {
+  background-color: #e4002b;
+}
+.flagWhite {
+  background-color: #fff;
+}
+.flagBlue {
+  background-color: #002654;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+
+.utilityLink {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.filterSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  font-size: 9px;
+  color: #666;
+}
+
+.filterButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #000;
+}
+
+.icon {
+  width: 14px;
+  height: 14px;
+}
