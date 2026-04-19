@@ -15,4 +15,7 @@ export default defineConfig({
       '@entities': path.resolve(__dirname, './src/entities'),
     },
   },
+  server: {
+    port: 3000,
+  },
 });

@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
-import { DesktopNavbar } from './DesktopNavbar';
-import { MobileNavbar } from './MobileNavbar';
+import { DesktopNavbar } from './desktop-navbar.tsx';
+import { MobileNavbar } from './mobile-navbar.tsx';
 import './navbar.css';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,25 +19,10 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isMenuOpen]);
-
-  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
-
   return (
-    <div
-      className={`navbarContainer ${isScrolled ? 'scrolled' : ''} ${isMenuOpen ? 'menuOpen' : ''}`}
-    >
+    <div className={`navbarContainer ${isScrolled ? 'scrolled' : ''}`}>
       <DesktopNavbar />
-      <MobileNavbar isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+      <MobileNavbar />
     </div>
   );
 }

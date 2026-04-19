@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       {isLoading && <SplashScreen onComplete={() => setIsLoading(false)} />}
-      <Home />
+      <Home isLoaded={!isLoading} />
     </>
   );
 }

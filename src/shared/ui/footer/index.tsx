@@ -1,95 +1,49 @@
 import './footer.css';
 
 export function Footer() {
-  const sections = [
-    {
-      title: 'THOM BROWNE',
-      links: ['ABOUT', 'JOURNAL', 'STORES', 'EYEWEAR LOCATIONS', 'CAREERS'],
-    },
-    {
-      title: 'CLIENT CARE',
-      links: [
-        'SHIPPING',
-        'TRACK AN ORDER',
-        'RETURNS',
-        'PRODUCT MAINTENANCE',
-        'ACCOUNT',
-        'FREQUENTLY ASKED QUESTIONS',
-        'CONTACT US',
-      ],
-    },
-    {
-      title: 'EXCLUSIVE SERVICES',
-      links: ['MADE TO MEASURE', 'TAILORING', 'EMBOSSING', 'GIFTING'],
-    },
-    {
-      title: 'LEGAL',
-      links: [
-        'TERMS & CONDITIONS',
-        'PRIVACY POLICY',
-        'DATA PROTECTION NON-MR DATA',
-        'ACCESSIBILITY STATEMENT',
-        'COOKIE POLICY',
-        'COOKIE PREFERENCES',
-      ],
-    },
+  const contactLinks = [
+    { label: 'INSTAGRAM', href: 'https://www.instagram.com/r3eign?igsh=em82MXh5a3J1ZDdm' },
+    { label: 'TIKTOK', href: 'https://www.tiktok.com/@_r3ign._?_' },
+    { label: 'FACEBOOK', href: 'https://www.facebook.com/r3iign' },
+    { label: '+374 77-585-583', href: 'tel:+37477585583' },
   ];
 
   return (
     <footer className="footerContainer">
-      {/*<div className="footerTop">*/}
-      {/*  <div className="footerSection">*/}
-      {/*    <label className="footerLabel">*/}
-      {/*      SIGN UP TO RECEIVE EARLY ACCESS TO THOM BROWNE COLLECTIONS AND EXCLUSIVE EVENTS.*/}
-      {/*    </label>*/}
-      {/*    <div className="footerInputBox">*/}
-      {/*      <span>SUBSCRIBE</span>*/}
-      {/*      <svg className="arrowIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">*/}
-      {/*        <polyline points="9 18 15 12 9 6"></polyline>*/}
-      {/*      </svg>*/}
-      {/*    </div>*/}
-      {/*  </div>*/}
+      <div className="footerContent">
+        <div className="footerContact">
+          <div className="footerTitle">CONNECT</div>
+          <nav className="contactLinks">
+            {contactLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="footerLink"
+                target={link.href.startsWith('http') ? '_blank' : undefined}
+                rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+        </div>
 
-      {/*  <div className="footerSection">*/}
-      {/*    <label className="footerLabel">SHIPPING TO</label>*/}
-      {/*    <div className="footerInputBox">*/}
-      {/*      <span>UNITED STATES ($)</span>*/}
-      {/*      <svg className="arrowIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">*/}
-      {/*        <polyline points="9 18 15 12 9 6"></polyline>*/}
-      {/*      </svg>*/}
-      {/*    </div>*/}
-      {/*  </div>*/}
-      {/*</div>*/}
+        <div className="footerBranding">
+          <div className="brandNameFooter">R3IGNE</div>
+          <div className="copyright">© {new Date().getFullYear()} R3IGNE</div>
+        </div>
 
-      <div className="footerMain">
-        {sections.map((section) => (
-          <div key={section.title} className="footerColumn">
-            <div className="columnTitle">{section.title}</div>
-            <nav className="columnLinks">
-              {section.links.map((link) => (
-                <a key={link} href="#" className="footerLink">
-                  {link}
-                </a>
-              ))}
-            </nav>
-          </div>
-        ))}
-      </div>
-
-      <div className="footerBottom">
-        <a href="#" className="socialLink">
-          SOCIAL
-          <svg
-            className="arrowIcon"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
+        <div className="footerAgency">
+          WEBSITE MADE BY{' '}
+          <a
+            href="https://www.neolabsagency.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="agencyLink"
           >
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </a>
-        <div className="copyright">© ${new Date().getFullYear()} R3IGNE</div>
+            NEO LABS AGENCY
+          </a>
+        </div>
       </div>
     </footer>
   );
