@@ -4,7 +4,7 @@
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  font-size: clamp(8px, 0.8vw, 10px);
+  font-size: clamp(10px, 0.8vw, 12px);
   color: #000;
   border-top: 1px solid #f0f0f0;
   box-sizing: border-box;
@@ -24,7 +24,7 @@
   font-weight: 500;
   margin-bottom: clamp(15px, 3vh, 30px);
   letter-spacing: 0.4em;
-  font-size: clamp(9px, 1vw, 11px);
+  font-size: clamp(12px, 1vw, 14px);
 }
 
 .contactLinks {
@@ -37,7 +37,7 @@
 .footerLink {
   text-decoration: none;
   color: #000;
-  font-size: clamp(8px, 0.8vw, 10px);
+  font-size: clamp(11px, 0.8vw, 12px);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 10px;
 }
@@ -62,13 +62,13 @@
 }
 
 .copyright {
-  font-size: clamp(7px, 0.7vw, 9px);
+  font-size: clamp(9px, 0.7vw, 10px);
   color: #888;
   letter-spacing: 0.1em;
 }
 
 .footerAgency {
-  font-size: clamp(7px, 0.7vw, 9px);
+  font-size: clamp(9px, 0.7vw, 10px);
   color: #aaa;
   letter-spacing: 0.2em;
   padding-top: 20px;

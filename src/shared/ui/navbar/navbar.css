@@ -3,7 +3,7 @@
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  font-size: clamp(8px, 0.8vw, 10px);
+  font-size: clamp(12px, 0.8vw, 14px);
   color: #fff;
   background-color: transparent;
   position: fixed;
