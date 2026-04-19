@@ -209,6 +209,9 @@
 }
 
 .logoSection {
+  background: transparent;
+  cursor: pointer;
+  border: none;
   flex: 0 0 auto;
   text-align: center;
   display: flex;

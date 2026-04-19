@@ -175,11 +175,19 @@ section {
   .collectionGrid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .collectionSection {
+    margin-bottom: 80px;
+  }
 }
 
 @media (max-width: 480px) {
   .collectionGrid {
     grid-template-columns: 1fr;
+  }
+
+  .collectionSection {
+    margin-bottom: 60px;
   }
 }
 
@@ -438,7 +446,7 @@ section {
     }
 
     .heroSection {
-      margin-top: -80px;
+      /*margin-top: -80px;*/
     }
 
     .brandName {

@@ -2,6 +2,13 @@ import { LazyImage } from '@shared/ui/lazy-image';
 import Logo from '@shared/assets/logo-bg.png';
 
 export function DesktopNavbar() {
+  const handleScrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <header className="mainHeader desktopOnly" role="banner">
       <div className="navSection" aria-label="Tagline left">
@@ -9,7 +16,12 @@ export function DesktopNavbar() {
       </div>
 
       <div className="logoSection">
-        <button className="logoButton" type="button" aria-label="Go to homepage">
+        <button
+          onClick={handleScrollTop}
+          className="logoButton"
+          type="button"
+          aria-label="Go to homepage"
+        >
           <LazyImage style={{ width: '100px' }} src={Logo} alt={'R3IGNE Logo'} />
         </button>
       </div>

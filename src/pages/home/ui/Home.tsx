@@ -108,9 +108,6 @@ export const Home = ({ isLoaded = false }: HomeProps) => {
                   alt={`${collection.name} piece - ${product.name}`}
                   className="productImage"
                 />
-                <div className="productInfo">
-                  <span className="productName">{product.name}</span>
-                </div>
               </article>
             ))}
           </div>
