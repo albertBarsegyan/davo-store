@@ -22,7 +22,7 @@ export function DesktopNavbar() {
           type="button"
           aria-label="Go to homepage"
         >
-          <LazyImage style={{ width: '100px' }} src={Logo} alt={'R3IGNE Logo'} />
+          <LazyImage style={{ width: '100px' }} src={Logo} alt={'R3IGN Logo'} />
         </button>
       </div>
 

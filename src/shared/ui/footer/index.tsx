@@ -29,8 +29,8 @@ export function Footer() {
         </div>
 
         <div className="footerBranding">
-          <div className="brandNameFooter">R3IGNE</div>
-          <div className="copyright">© {new Date().getFullYear()} R3IGNE</div>
+          <div className="brandNameFooter">R3IGN</div>
+          <div className="copyright">© {new Date().getFullYear()} R3IGN</div>
         </div>
 
         <div className="footerAgency">

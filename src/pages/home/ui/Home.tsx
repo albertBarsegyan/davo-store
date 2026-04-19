@@ -79,7 +79,7 @@ export const Home = ({ isLoaded = false }: HomeProps) => {
             <p className="heroTextLine">This isn’t just clothing.</p>
             <p className="heroTextLine">It’s a journey to express your identity.</p>
           </div>
-          <h1 className="brandNameHero">R3IGNE</h1>
+          <h1 className="brandNameHero">R3IGN</h1>
         </div>
         <div className="heroBackgroundEffect"></div>
         <div className="scrollIndicator">

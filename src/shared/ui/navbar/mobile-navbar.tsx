@@ -15,7 +15,7 @@ export function MobileNavbar() {
         <span className="tagline">TON STYLE</span>
       </div>
       <button type="button" onClick={handleScrollTop} className="logoSection">
-        <LazyImage style={{ width: '80px' }} src={Logo} alt={'R3IGNE Logo'} />
+        <LazyImage style={{ width: '80px' }} src={Logo} alt={'R3IGN Logo'} />
       </button>
 
       <div className="navSection right" aria-label="Tagline right">
